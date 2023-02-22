@@ -1,38 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100%;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form {
+  width: 250px;
+  height: 300px;
+  box-shadow: 0 0 10px rgb(192, 192, 192);
+  border-radius: 10px;
+  padding: 30px 20px;
+}
+
+.form h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #46045e;
+}
+
+.username,
+.password {
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid #833ab4;
+  outline: none;
+}
+
+.username:focus {
+  border: 1px solid #c13584;
+}
+.password:focus {
+  border: 1px solid #c13584;
+}
+
+/*  hexa instagram
+      #405de6,
+      #5b51d8,
+      #833ab4,
+      #c13584,
+      #e1306c,
+      #fd1d1d,
+      #f56040,
+      #f77737,
+      #fcaf45,
+      #ffdc80
+      
+*/
+
+.btn-login {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  margin-top: 30px;
+  padding: 10px 0;
+  background-color: #833ab4;
+  color: white;
+  transition: 0.5s;
+}
+
+.btn-login:hover {
+  cursor: pointer;
+  background-color: #c13584;
+}
+
+#light {
+  background-color: #f3ebf6;
+}
+
+#light .form {
+  background-color: white;
+}
+
+#dark {
+  background-color: #46045e;
+}
+
+#dark .form {
+  background-color: #833ab4;
+}
+
+#dark .form h2 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#dark .form input {
+  border-bottom: 1px solid #c13584;
+  background-color: #833ab4;
+  color: white;
+}
+#dark .form button {
+  background-color: #c13584;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#switch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#light #switch label {
+  color: black;
+}
+#dark #switch label {
+  color: white;
 }
